@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primeira-cor: #025939;
+    --segunda-cor: #04D939;
+    --terceira-cor: #027333;
+    --cor-background: #01162a;
+}
+
+body, button, textarea {
+    font-family: "kode mono", sans-serif;
+}
+
+body{
+    background-color: var(--cor-background);
+    width: 100vw;
+    height: 100vh;
+}
+
+section.criptografar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+}
+
+.cripto {
+    margin-left: 10%;
+}
+
+
+#campoCriptografar {
+    width: 50vw;
+    height: 45vh;
+    font-size: 2rem;
+    color: var(--segunda-cor);
+    margin-top: 20%;
+    margin-bottom: 5%;
+    background-color: transparent;
+    border: none;
+    resize: none;
+}
+
+/* Remove a borda da textarea quando clicado */
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.info {
+    color: var(--segunda-cor);
+    font-weight: 600;
+    padding-top: 1rem;
+    font-size: 1rem;
+}
+
+.imgInfo{
+    width: 20px;
+}
+
+.imgAlert {
+    width: 4rem;
+    display: none;
+}
+
+.imgAlert {
+    animation: blink-animation 1s infinite alternate;
+}
+  
+@keyframes blink-animation {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+
+.cripto__btn {
+    display: flex;
+    gap: 5%;
+}
+
+button {
+    color: var(--segunda-cor);
+    height: 67px;
+    width: 25vw;
+    border-radius: 24px;
+    background-color: var(--primeira-cor); 
+    text-shadow: 2px 2px 2px black;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--terceira-cor);
+    transition: 0.5s;
+}
+
+
+
+.btnCripto, .btnDescripto {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.cadeado{
+    width: 50px;
+}
+
+.exibirCriptografia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 677px;
+    width: 400px;
+
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    background-color: transparent;
+    color: var(--segunda-cor);
+    font-size: 1.7rem;
+
+    border: 2px solid var(--terceira-cor);
+    border-radius: 32px;
+
+    background-image: url("imagens/codigoBinario.gif");
+}
+
+.exibirCriptografia p {
+    margin: 20px 10px 0px 10px;
+}
+
+.btnCopiar {
+    font-size: 2rem;
+    width: 90%;
+    height: 10%;
+    margin-bottom: 5%;
+    display: none;
+}
+
+.rodape {
+    background-color: var(--primeira-cor);
+}
+
+.rodape__p {
+    color: var(--segunda-cor);
+}
+
+@media(max-width: 1250px) {
+
+    #campoCriptografar {
+        margin-top: 10%;
+    }
+    
+    .exibirCriptografia {
+        height: 25vh;
+        width: 50vw;
+        margin-left: 15%;
+    }
+
+    .btnCopiar {
+        font-size: 1.5rem;
+        width: 50%;
+        height: 45px;
+    }
+}
+
+@media(max-width: 800px) {  
+    #campoCriptografar {
+        font-size: 1.5rem;
+    }
+
+    .btnCripto, .btnDescripto{
+        font-size: 0.8rem;
+    }
+
+    .btnCopiar {
+        font-size: 1.5rem;
+        width: 50%;
+        height: 40px;
+    }
+
+    .cripto {
+        margin-left: 0;
+    }
+
+    .cadeado {
+        width: 20px;
+    }
+
+    .exibirCriptografia {
+        height: 40vh;
+        margin-left: 5%;
+    }
+
+    
+
+    #campoCriptografar {
+        margin-top: 10%;
+        height: 250px;
+        margin-left: 5%;
+    }
+}
+
+@media(max-width: 500px) {
+    #campoCriptografar {
+        font-size: 1rem;
+    }
+
+    .cripto__btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+    }
+
+    .btnCripto, .btnDescripto {
+        height: 7vh;
+        width: 50vw;
+        font-size: 1rem;
+    }
+
+    .btnCopiar {
+        font-size: 1rem;
+    }
+
+    .cadeado {
+        width: 25px;
+    }
+    
+}
+
+@media(max-width: 300px) {
+    .btnCripto, .btnDescripto {
+        width: 7rem;
+        height: 3rem;
+        font-size: 0.7rem;
+    }
+
+    .btnCopiar {
+        font-size: 0.7rem;
+    }
+
+    .cadeado {
+        width: 1rem;
+    }
+
+    #campoCriptografar {
+        width: auto;
+    }
+}

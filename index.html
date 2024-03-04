@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Decodificador</title>
+</head>
+<body>
+    <main>
+        <!--Campo do texto para ser criptografado-->
+        <section class="criptografar">  
+            <div class="cripto">
+                <textarea placeholder="Digite o texto aqui" name="texto" id="campoCriptografar" cols="" rows="10"></textarea>
+                <p class="info"><img class="imgInfo" src="imagens/info.png"> letras minusculas e sem acentos! <img class="imgAlert" src="./imagens/alert.png" alt=""></p> 
+                <div class="cripto__btn">
+                    <button class="btnCripto" onclick="conferirLetrasCriptografar()" type="button"><img class="cadeado" src="imagens/cadeadoFechado.png">Criptografar</button>
+                    <button class="btnDescripto" onclick="conferirLetrasDescriptografar()" type="button"><img class="cadeado" src="imagens/cadeadoAberto.png">Descriptografar</button>
+                </div>
+            </div>
+
+            <div class="exibirCriptografia">
+                <p class="textoCriptografado"></p>
+                <button class="btnCopiar" onclick="copiar()" type="button">Copiar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">   
+        <p class="rodape__p">Desenvolvido por: Fabio Augusto - Challange do programa ONE, parceria de Alura + Oracle</p>
+    </footer>
+
+</body>
+</html>
